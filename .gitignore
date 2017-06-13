@@ -1,2 +1,4 @@
 .env
 ngrok
+./ngrok
+./.env
