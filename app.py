@@ -17,9 +17,13 @@ phone_pattern = re.compile(r"^[\d\+\-\(\) ]+$")
 
 
 
-@app.route('/')
-def index():
+@app.route('/remote_client')
+def remote_client():
     return send_file('remote_client/parent_client.html')
+
+@app.route('/home_client')
+def home_client():
+    return send_file('home_client/home_client.html')
 
 
 @app.route('/token', methods=['GET', 'POST'])

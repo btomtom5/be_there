@@ -5,42 +5,9 @@
       log('Got a token.');
       console.log('Token: ' + data.token);
 
-      // Setup Twilio.Device
-      Twilio.Device.setup(data.token);
+      setUpVoiceComm(data);
 
-      Twilio.Device.ready(function (device) {
-        log('Twilio.Device Ready!');
-        document.getElementById('call-controls').style.display = 'block';
-      });
-
-      Twilio.Device.error(function (error) {
-        log('Twilio.Device Error: ' + error.message);
-      });
-
-      Twilio.Device.connect(function (conn) {
-        log('Successfully established call!');
-        document.getElementById('button-call').style.display = 'none';
-        document.getElementById('button-hangup').style.display = 'inline';
-      });
-
-      Twilio.Device.disconnect(function (conn) {
-        log('Call ended.');
-        document.getElementById('button-call').style.display = 'inline';
-        document.getElementById('button-hangup').style.display = 'none';
-      });
-
-      Twilio.Device.incoming(function (conn) {
-        log('Incoming connection from ' + conn.parameters.From);
-        var archEnemyPhoneNumber = '+12099517118';
-
-        if (conn.parameters.From === archEnemyPhoneNumber) {
-          conn.reject();
-          log('It\'s your nemesis. Rejected call.');
-        } else {
-          // accept the incoming connection and start two-way audio
-          conn.accept();
-        }
-      });
+      setUpVideoComm(data);
 
       setClientNameUI(data.identity);
     })
@@ -79,4 +46,47 @@ function setClientNameUI(clientName) {
   var div = document.getElementById('client-name');
   div.innerHTML = 'Your client name: <strong>' + clientName +
     '</strong>';
+}
+
+function setUpVoiceComm(data){
+  // Setup Twilio.Device
+  Twilio.Device.setup(data.token);
+
+  Twilio.Device.ready(function (device) {
+    log('Twilio.Device Ready!');
+    document.getElementById('call-controls').style.display = 'block';
+  });
+
+  Twilio.Device.error(function (error) {
+    log('Twilio.Device Error: ' + error.message);
+  });
+
+  Twilio.Device.connect(function (conn) {
+    log('Successfully established call!');
+    document.getElementById('button-call').style.display = 'none';
+    document.getElementById('button-hangup').style.display = 'inline';
+  });
+
+  Twilio.Device.disconnect(function (conn) {
+    log('Call ended.');
+    document.getElementById('button-call').style.display = 'inline';
+    document.getElementById('button-hangup').style.display = 'none';
+  });
+
+  Twilio.Device.incoming(function (conn) {
+    log('Incoming connection from ' + conn.parameters.From);
+    var archEnemyPhoneNumber = '+12099517118';
+
+    if (conn.parameters.From === archEnemyPhoneNumber) {
+      conn.reject();
+      log('It\'s your nemesis. Rejected call.');
+    } else {
+      // accept the incoming connection and start two-way audio
+      conn.accept();
+    }
+  });
+}
+
+function setUpVideoComm(data){
+
 }

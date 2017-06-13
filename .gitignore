@@ -1,4 +1,5 @@
 .env
 ngrok
 ./ngrok
-./.env
+./.envrouting.log
+routing.log
