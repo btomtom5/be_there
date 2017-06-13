@@ -18,7 +18,7 @@ def index():
     return app.send_static_file('index.html')
 
 
-@app.route('/token', methods=['GET'])
+@app.route('/token', methods=['GET', 'POST'])
 def token():
     # get credentials for environment variables
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
