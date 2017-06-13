@@ -1,0 +1,151 @@
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 130-873-744
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:56:23] "GET /token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:57:09] "POST /voice HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:58:15] "GET /receive_call?Called=%2B14159385857&ToState=CA&CallerCountry=CU&Direction=inbound&CallerState=Ciudad+Habana&ToZip=94903&CallSid=CAe623a3f322f8aa636ed36819e3553af9&To=%2B14159385857&CallerZip=&ToCountry=US&ApiVersion=2010-04-01&CalledZip=94903&CalledCity=POINT+REYES+STATION&CallStatus=ringing&From=%2B53748755&AccountSid=ACcbb98028e812fde7726feee9c63fa825&CalledCountry=US&CallerCity=&Caller=%2B53748755&FromCountry=CU&ToCity=POINT+REYES+STATION&FromCity=&CalledState=CA&FromZip=&FromState=Ciudad+Habana HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:58:22] "GET /receive_call?Called=%2B14159385857&ToState=CA&CallerCountry=CU&Direction=inbound&CallerState=Ciudad+Habana&ToZip=94903&CallSid=CA761150e836e69a3f907fa170592a7ad5&To=%2B14159385857&CallerZip=&ToCountry=US&ApiVersion=2010-04-01&CalledZip=94903&CalledCity=POINT+REYES+STATION&CallStatus=ringing&From=%2B53748755&AccountSid=ACcbb98028e812fde7726feee9c63fa825&CalledCountry=US&CallerCity=&Caller=%2B53748755&FromCountry=CU&ToCity=POINT+REYES+STATION&FromCity=&CalledState=CA&FromZip=&FromState=Ciudad+Habana HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:58:29] "GET /receive_call?Called=%2B14159385857&ToState=CA&CallerCountry=CU&Direction=inbound&CallerState=Ciudad+Habana&ToZip=94903&CallSid=CAda8d9d6d7ea2be5a7fffae3081469913&To=%2B14159385857&CallerZip=&ToCountry=US&ApiVersion=2010-04-01&CalledZip=94903&CalledCity=POINT+REYES+STATION&CallStatus=ringing&From=%2B53748755&AccountSid=ACcbb98028e812fde7726feee9c63fa825&CalledCountry=US&CallerCity=&Caller=%2B53748755&FromCountry=CU&ToCity=POINT+REYES+STATION&FromCity=&CalledState=CA&FromZip=&FromState=Ciudad+Habana HTTP/1.1" 500 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 19:58:37] "GET /receive_call?ApiVersion=2010-04-01&CalledZip=94903&Called=%2B14159385857&CalledCity=POINT+REYES+STATION&CallStatus=ringing&From=%2B1%2B153748755&ToState=CA&Direction=inbound&AccountSid=ACcbb98028e812fde7726feee9c63fa825&CalledCountry=US&Caller=%2B1%2B153748755&ToCity=POINT+REYES+STATION&ToZip=94903&CalledState=CA&CallSid=CA0b646fd346bf5d578fad207ea260638b&To=%2B14159385857&ToCountry=US HTTP/1.1" 500 -
+INFO:werkzeug: * Detected change in '/home/brian/Documents/be_there/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug: * Detected change in '/home/brian/Documents/be_there/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:45] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:45] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:45] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:45] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:47] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:47] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:47] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:01:47] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:08] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:08] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:08] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:08] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:09] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:09] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:09] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:09] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:15] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:15] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:16] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:17] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:17] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:02:17] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:03:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:03:33] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:03:33] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:03:33] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:03:36] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:53] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:53] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:53] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:54] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:55] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:55] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:55] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:06:55] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:01] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:01] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:01] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:02] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:17] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:17] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:17] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:18] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:24] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:24] "GET /parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:24] "GET /parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 205-509-211
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:54] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:54] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:54] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:07:54] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:09:06] "GET /remote_client HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:09:23] "GET /static HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:09:26] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:09:26] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:09:27] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 130-873-744
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:15] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:15] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:15] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:16] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:17] "GET /remote_client/static/parent_client.css HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:17] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:13:17] "GET /remote_client/static/parent_client.js HTTP/1.1" 404 -
+INFO:werkzeug: * Detected change in '/home/brian/Documents/be_there/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 130-873-744
+INFO:werkzeug: * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 130-873-744
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:17:11] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:17:11] "GET /static/remote_client/parent_client.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:17:11] "GET /static/remote_client/parent_client.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:17:11] "GET /token HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:17:48] "POST /voice HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [13/Jun/2017 20:18:16] "GET /receive_call?Called=%2B14159385857&ToState=CA&CallerCountry=CU&Direction=inbound&CallerState=Ciudad+Habana&ToZip=94903&CallSid=CA26902653ab30facb6bc2cfc9ba630f7c&To=%2B14159385857&CallerZip=&ToCountry=US&ApiVersion=2010-04-01&CalledZip=94903&CalledCity=POINT+REYES+STATION&CallStatus=ringing&From=%2B53748755&AccountSid=ACcbb98028e812fde7726feee9c63fa825&CalledCountry=US&CallerCity=&Caller=%2B53748755&FromCountry=CU&ToCity=POINT+REYES+STATION&FromCity=&CalledState=CA&FromZip=&FromState=Ciudad+Habana HTTP/1.1" 200 -

@@ -2,7 +2,7 @@
 import logging
 import os
 import re
-from flask import Flask, jsonify, request, Response, render_template
+from flask import Flask, jsonify, request, Response, send_file
 from faker import Factory
 from twilio.jwt.client import ClientCapabilityToken
 from twilio.twiml.voice_response import VoiceResponse, Dial
@@ -11,7 +11,7 @@ logging.basicConfig(filename='routing.log',level=logging.DEBUG)
 
 app = Flask(__name__)
 fake = Factory.create()
-client_name = 'Real-Monkey'
+client_name = 'RealMonkey'
 alphanumeric_only = re.compile('[\W_]+')
 phone_pattern = re.compile(r"^[\d\+\-\(\) ]+$")
 
@@ -19,7 +19,7 @@ phone_pattern = re.compile(r"^[\d\+\-\(\) ]+$")
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return send_file('remote_client/parent_client.html')
 
 
 @app.route('/token', methods=['GET', 'POST'])
@@ -59,10 +59,10 @@ def voice():
 
     return Response(str(resp), mimetype='text/xml')
 
+
 @app.route('/receive_call', methods=['GET'])
 def receive_call():
-
-    return app.send_static_file('incoming_call.xml')
+    return send_file('remote_client/incoming_call.xml')
 
 if __name__ == '__main__':
     app.run(debug=True)
