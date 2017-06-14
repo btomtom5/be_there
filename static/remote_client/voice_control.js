@@ -12,15 +12,6 @@
     .fail(function () {
       log('Could not get a token from server!');
     });
-
-  // $.getJSON('/video_token')
-  //   .done(function(data){
-  //     log('Got a token.');
-      
-  //     setUpVideoComm(data);
-
-  //   })
-
 });
 
 // Activity log
@@ -91,17 +82,4 @@ function setUpVoiceComm(data){
     log('Hanging up...');
     Twilio.Device.disconnectAll();
   };
-}
-
-function setUpVideoComm(data){
-  Twilio.Video.connect(data.access_token, {name:'my-new-room'}).then(
-    function(room) {
-      console.log('Successfully joined a Room: ', room);
-      room.on('participantConnected', 
-        function(participant) {
-          console.log('A remote Participant connected: ', participant);
-        })
-    }, function(error) {
-        console.error('Unable to connect to Room: ' +  error.message);
-      });
 }
