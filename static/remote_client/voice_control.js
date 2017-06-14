@@ -1,13 +1,11 @@
 ﻿$(function () {
   log('Requesting Capability Token...');
-  $.getJSON('/token')
+  $.getJSON('/voice_token')
     .done(function (data) {
       log('Got a token.');
       console.log('Token: ' + data.token);
 
       setUpVoiceComm(data);
-
-      setUpVideoComm(data);
 
       setClientNameUI(data.identity);
     })
@@ -15,22 +13,13 @@
       log('Could not get a token from server!');
     });
 
-  // Bind button to make call
-  document.getElementById('button-call').onclick = function () {
-    // get the phone number to connect the call to
-    var params = {
-      To: document.getElementById('phone-number').value
-    };
+  // $.getJSON('/video_token')
+  //   .done(function(data){
+  //     log('Got a token.');
+      
+  //     setUpVideoComm(data);
 
-    console.log('Calling ' + params.To + '...');
-    Twilio.Device.connect(params);
-  };
-
-  // Bind button to hangup call
-  document.getElementById('button-hangup').onclick = function () {
-    log('Hanging up...');
-    Twilio.Device.disconnectAll();
-  };
+  //   })
 
 });
 
@@ -85,8 +74,34 @@ function setUpVoiceComm(data){
       conn.accept();
     }
   });
+
+    // Bind button to make call
+  document.getElementById('button-call').onclick = function () {
+    // get the phone number to connect the call to
+    var params = {
+      To: document.getElementById('phone-number').value
+    };
+
+    console.log('Calling ' + params.To + '...');
+    Twilio.Device.connect(params);
+  };
+
+  // Bind button to hangup call
+  document.getElementById('button-hangup').onclick = function () {
+    log('Hanging up...');
+    Twilio.Device.disconnectAll();
+  };
 }
 
 function setUpVideoComm(data){
-
+  Twilio.Video.connect(data.access_token, {name:'my-new-room'}).then(
+    function(room) {
+      console.log('Successfully joined a Room: ', room);
+      room.on('participantConnected', 
+        function(participant) {
+          console.log('A remote Participant connected: ', participant);
+        })
+    }, function(error) {
+        console.error('Unable to connect to Room: ' +  error.message);
+      });
 }

@@ -6,8 +6,10 @@ from flask import Flask, jsonify, request, Response, send_file
 from faker import Factory
 from twilio.jwt.client import ClientCapabilityToken
 from twilio.twiml.voice_response import VoiceResponse, Dial
+from twilio.jwt.access_token import AccessToken
+from twilio.jwt.access_token.grants import VoiceGrant, VideoGrant
 
-logging.basicConfig(filename='routing.log',level=logging.DEBUG)
+logging.basicConfig(filename='logs/routing.log',level=logging.DEBUG)
 
 app = Flask(__name__)
 fake = Factory.create()
@@ -26,24 +28,47 @@ def home_client():
     return send_file('home_client/home_client.html')
 
 
-@app.route('/token', methods=['GET', 'POST'])
-def token():
+@app.route('/voice_token', methods=['GET', 'POST'])
+def voice_token():
     # get credentials for environment variables
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
-    application_sid = os.environ['TWILIO_TWIML_APP_SID']
+    voice_sid = os.environ['TWILIO_TWIML_APP_SID']
 
     # Generate a random user name
     identity = alphanumeric_only.sub('', client_name)
 
     # Create a Capability Token
     capability = ClientCapabilityToken(account_sid, auth_token)
-    capability.allow_client_outgoing(application_sid)
+    capability.allow_client_outgoing(voice_sid)
     capability.allow_client_incoming(identity)
     token = capability.to_jwt()
 
     # Return token info as JSON
-    return jsonify(identity=identity, token=token.decode('utf-8'))
+    return jsonify(
+        identity=identity,
+        token=token.decode('utf-8'))
+
+@app.route('/video_token', methods=['GET', 'POST'])
+def video_token():
+    account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    video_sid = os.environ['TWILIO_VIDEO_API_SID']
+    video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
+
+    # Generate a random user name
+    identity = alphanumeric_only.sub('', client_name)
+
+    #Create an Access Token
+    access = AccessToken(account_sid, video_sid, video_secret)
+    access.identity = identity
+    video_grant = VideoGrant()
+    access.add_grant(video_grant)
+    access_token = access.to_jwt() 
+
+    return jsonify(
+            identity=identity,
+            token=access_token.decode('utf-8'))
+
 
 
 @app.route("/voice", methods=['POST'])
