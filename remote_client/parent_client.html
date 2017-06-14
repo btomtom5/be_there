@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>Twilio Client Quickstart</title>
-  <link rel="stylesheet" href="/static/remote_client/parent_client.css">
+  <link rel="stylesheet" href="/static/remote_client/voice_control.css">
+  <link rel="stylesheet" href="/static/remote_client/video_control.css">
 </head>
 <body>
   <div id="controls">
@@ -18,9 +19,27 @@
     </div>
     <div id="log"></div>
   </div>
+  <div id="remote-media"></div>
+
+<div id="video-controls">
+  <div id="preview">
+    <p class="instructions">Hello Beautiful</p>
+    <div id="local-media"></div>
+    <button id="button-preview">Preview My Camera</button>
+  </div>
+  <div id="room-controls">
+    <p class="instructions">Room Name:</p>
+    <input id="room-name" type="text" placeholder="Enter a room name" />
+    <button id="button-join">Join Room</button>
+    <button id="button-leave">Leave Room</button>
+  </div>
+  <div id="video-log"></div>
+</div>
+
 
   <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="/static/remote_client/voice_control.js"></script>
+  <script src="/static/remote_client/bundle.js"></script>
 </body>
 </html>

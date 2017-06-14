@@ -1,6 +1,6 @@
 'use strict';
 
-var Video = require('twilio-video');
+var Video = require('twilio-video')
 
 var activeRoom;
 var previewTracks;
@@ -45,7 +45,7 @@ if (!navigator.webkitGetUserMedia && !navigator.mozGetUserMedia) {
 window.addEventListener('beforeunload', leaveRoomIfJoined);
 
 // Obtain a token from the server in order to connect to the Room.
-$.getJSON('/token', function(data) {
+$.getJSON('/video_token', function(data) {
   identity = data.identity;
   document.getElementById('room-controls').style.display = 'block';
 
@@ -163,7 +163,7 @@ document.getElementById('button-preview').onclick = function() {
 
 // Activity log.
 function log(message) {
-  var logDiv = document.getElementById('log');
+  var logDiv = document.getElementById('video-log');
   logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
   logDiv.scrollTop = logDiv.scrollHeight;
 }
