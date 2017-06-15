@@ -49,8 +49,28 @@ def voice_token():
         identity=identity,
         token=token.decode('utf-8'))
 
-@app.route('/video_token', methods=['GET', 'POST'])
-def video_token():
+@app.route('/remote_video_token', methods=['GET', 'POST'])
+def remote_video_token():
+    account_sid = os.environ['TWILIO_ACCOUNT_SID']
+    video_sid = os.environ['TWILIO_VIDEO_API_SID']
+    video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
+
+    # Generate a random user name
+    identity = alphanumeric_only.sub('', fake.user_name())
+
+    #Create an Access Token
+    access = AccessToken(account_sid, video_sid, video_secret)
+    access.identity = identity
+    video_grant = VideoGrant()
+    access.add_grant(video_grant)
+    access_token = access.to_jwt() 
+
+    return jsonify(
+            identity=identity,
+            token=access_token.decode('utf-8'))
+
+@app.route('/home_video_token', methods=['GET', 'POST'])
+def home_video_token():
     account_sid = os.environ['TWILIO_ACCOUNT_SID']
     video_sid = os.environ['TWILIO_VIDEO_API_SID']
     video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
