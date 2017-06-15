@@ -36,7 +36,7 @@ def voice_token():
     voice_sid = os.environ['TWILIO_TWIML_APP_SID']
 
     # Generate a random user name
-    identity = alphanumeric_only.sub('', client_name)
+    identity = alphanumeric_only.sub('', fake.user_name())
 
     # Create a Capability Token
     capability = ClientCapabilityToken(account_sid, auth_token)
@@ -56,7 +56,7 @@ def video_token():
     video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
 
     # Generate a random user name
-    identity = alphanumeric_only.sub('', client_name)
+    identity = alphanumeric_only.sub('', fake.user_name())
 
     #Create an Access Token
     access = AccessToken(account_sid, video_sid, video_secret)
