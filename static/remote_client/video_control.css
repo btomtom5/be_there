@@ -107,3 +107,7 @@ div#controls div#room-controls button {
 div#controls div#room-controls button#button-leave {
   display: none;
 }
+
+#button-call{
+  display: none;
+}
