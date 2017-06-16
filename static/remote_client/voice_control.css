@@ -14,11 +14,8 @@ div#controls {
   padding: 3em;
   max-width: 1200px;
   margin: 0 auto;
+  display: inline;
 }
-
-  div#controls div {
-    float: left;
-  }
 
     div#controls div#call-controls,
     div#controls div#info {

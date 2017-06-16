@@ -16,10 +16,6 @@ div#controls {
   margin: 0 auto;
 }
 
-  div#controls div {
-    float: left;
-  }
-
     div#controls div#call-controls,
     div#controls div#info {
       width: 16em;
@@ -62,6 +58,7 @@ div#controls {
 
   div#controls div#call-controls {
     display: none;
+    text-align: center;
   }
 
     div#controls div#call-controls input {

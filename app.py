@@ -13,7 +13,8 @@ logging.basicConfig(filename='logs/routing.log',level=logging.DEBUG)
 
 app = Flask(__name__)
 fake = Factory.create()
-client_name = 'RealMonkey'
+home_name = 'Harry'
+remote_name = 'Potter'
 alphanumeric_only = re.compile('[\W_]+')
 phone_pattern = re.compile(r"^[\d\+\-\(\) ]+$")
 
@@ -56,7 +57,7 @@ def remote_video_token():
     video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
 
     # Generate a random user name
-    identity = alphanumeric_only.sub('', fake.user_name())
+    identity = alphanumeric_only.sub('', remote_name)
 
     #Create an Access Token
     access = AccessToken(account_sid, video_sid, video_secret)
@@ -76,7 +77,7 @@ def home_video_token():
     video_secret = os.environ['TWILIO_VIDEO_API_SECRET']
 
     # Generate a random user name
-    identity = alphanumeric_only.sub('', fake.user_name())
+    identity = alphanumeric_only.sub('', home_name)
 
     #Create an Access Token
     access = AccessToken(account_sid, video_sid, video_secret)

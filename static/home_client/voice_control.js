@@ -1,8 +1,8 @@
 ﻿$(function () {
-  log('Requesting Capability Token...');
+  console.log('Requesting Capability Token...');
   $.getJSON('/voice_token')
     .done(function (data) {
-      log('Got a token.');
+      console.log('Got a token.');
       console.log('Token: ' + data.token);
 
       setUpVoiceComm(data);
@@ -10,16 +10,9 @@
       setClientNameUI(data.identity);
     })
     .fail(function () {
-      log('Could not get a token from server!');
+      console.log('Could not get a token from server!');
     });
 });
-
-// Activity log
-function log(message) {
-  var logDiv = document.getElementById('log');
-  logDiv.innerHTML += '<p>&gt;&nbsp;' + message + '</p>';
-  logDiv.scrollTop = logDiv.scrollHeight;
-}
 
 // Set the client name in the UI
 function setClientNameUI(clientName) {
@@ -33,33 +26,33 @@ function setUpVoiceComm(data){
   Twilio.Device.setup(data.token);
 
   Twilio.Device.ready(function (device) {
-    log('Twilio.Device Ready!');
+    console.log('Twilio.Device Ready!');
     document.getElementById('call-controls').style.display = 'block';
   });
 
   Twilio.Device.error(function (error) {
-    log('Twilio.Device Error: ' + error.message);
+    console.log('Twilio.Device Error: ' + error.message);
   });
 
   Twilio.Device.connect(function (conn) {
-    log('Successfully established call!');
+    console.log('Successfully established call!');
     document.getElementById('button-call').style.display = 'none';
     document.getElementById('button-hangup').style.display = 'inline';
   });
 
   Twilio.Device.disconnect(function (conn) {
-    log('Call ended.');
+    console.log('Call ended.');
     document.getElementById('button-call').style.display = 'inline';
     document.getElementById('button-hangup').style.display = 'none';
   });
 
   Twilio.Device.incoming(function (conn) {
-    log('Incoming connection from ' + conn.parameters.From);
+    console.log('Incoming connection from ' + conn.parameters.From);
     var archEnemyPhoneNumber = '+12099517118';
 
     if (conn.parameters.From === archEnemyPhoneNumber) {
       conn.reject();
-      log('It\'s your nemesis. Rejected call.');
+      console.log('It\'s your nemesis. Rejected call.');
     } else {
       // accept the incoming connection and start two-way audio
       conn.accept();
@@ -79,7 +72,7 @@ function setUpVoiceComm(data){
 
   // Bind button to hangup call
   document.getElementById('button-hangup').onclick = function () {
-    log('Hanging up...');
+    console.log('Hanging up...');
     Twilio.Device.disconnectAll();
   };
 }
