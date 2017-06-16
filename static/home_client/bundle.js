@@ -21768,6 +21768,7 @@ function roomJoined(room) {
   // When a Participant joins the Room, console.log the event.
   room.on('participantConnected', function(participant) {
     console.log("Joining: '" + participant.identity + "'");
+    document.getElementById('local-media').removeClass('hidden');
   });
 
   // When a Participant adds a Track, attach it to the DOM.
@@ -21793,6 +21794,7 @@ function roomJoined(room) {
   // of all Participants, including that of the LocalParticipant.
   room.on('disconnected', function() {
     console.log('Left');
+    document.getElementById('local-media').addClass('hidden');
     if (previewTracks) {
       previewTracks.forEach(function(track) {
         track.stop();

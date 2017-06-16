@@ -6,20 +6,12 @@
       console.log('Token: ' + data.token);
 
       setUpVoiceComm(data);
-
-      setClientNameUI(data.identity);
     })
     .fail(function () {
       console.log('Could not get a token from server!');
     });
 });
 
-// Set the client name in the UI
-function setClientNameUI(clientName) {
-  var div = document.getElementById('client-name');
-  div.innerHTML = 'Your client name: <strong>' + clientName +
-    '</strong>';
-}
 
 function setUpVoiceComm(data){
   // Setup Twilio.Device

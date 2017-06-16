@@ -142,5 +142,9 @@ div#video-controls div#video-log p {
   text-indent: -1.25em;
   width: 90%;
 }
+
+.hidden {
+  display: none;
+}
 Contact GitHub API Training Shop Blog About
 © 2017 GitHub, Inc. Terms Privacy Security Status Help
